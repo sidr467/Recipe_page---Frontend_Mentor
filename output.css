@@ -588,12 +588,21 @@ video {
   }
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-6 {
@@ -623,6 +632,10 @@ video {
 .bg-pink-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-8 {
@@ -678,20 +691,26 @@ video {
 }
 
 body {
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-family: "Outfit", sans-serif;
-  gap: 4rem;
+  gap: 2rem;
   margin: 2rem auto;
-  padding: 1rem 4rem;
+  padding: 1rem;
 }
 
-main > img {
+img {
   border-radius: 2rem;
-  /* margin: 2rem 1.8rem; */
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 auto;
 }
 
 .main-heading {
@@ -710,7 +729,7 @@ strong {
 table,
 td,
 th {
-  padding: 1rem 10rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid var(--LightGrey);
 }
 
@@ -729,4 +748,30 @@ p {
 .hr {
   border-bottom: 1px solid var(--LightGrey);
   padding-bottom: 3rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  body {
+    padding: 1rem 2rem;
+  }
+
+  table,
+  td,
+  th {
+    padding: 1rem 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 1rem 4rem;
+  }
+
+  table,
+  td,
+  th {
+    padding: 1rem 10rem;
+  }
 }
