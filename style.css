@@ -72,6 +72,7 @@ td {
 }
 
 p {
+  color: var(--WengeBrown);
   margin-left: 1rem;
 }
 
